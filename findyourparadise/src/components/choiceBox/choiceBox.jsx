@@ -3,9 +3,7 @@ import ChoiceButton from '../choiceButton/choiceButton.jsx';
 import choices from '../../choices/choices.js';
 import SubmitButton from '../submitButton/submitButton.jsx';
 
-
-
-const ChoiceBox = () => {
+const ChoiceBox = ({changeView}) => {
   // createState to hold choices object
   // where key is name of choice and prop is bool
   const [ userSelection, setUserSelection ] = useState({});
@@ -46,7 +44,7 @@ const ChoiceBox = () => {
         {renderButtons()}
         </div>
 
-      <SubmitButton id="submit-button"/>
+      <SubmitButton id="submit-button" userSelection={userSelection} changeView={changeView} />
       </form>
 
     </div>

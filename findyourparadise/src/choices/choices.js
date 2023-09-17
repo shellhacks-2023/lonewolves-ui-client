@@ -1,15 +1,15 @@
 
 const choices = [
-'Student Teacher Ratio',
-'Public School Count',
-'Private School Count',
-'Violent Crimes',
-'Property Crimes',
-'Longevity',
-'Weather Events',
-'Weather Injuries',
-'Weather Fatalities',
-'I Want It All'
+'student_teacher_ratio',
+'public_school_count',
+'private_school_count',
+'violent_crimes',
+'property_crimes',
+'longevity',
+'weather_events',
+'weather_injuries',
+'weather_fatalities',
+'i_want_it_all'
 ];
 
 export default choices;
