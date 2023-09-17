@@ -1,15 +1,21 @@
 import React from 'react';
 import axios from 'axios';
 
-const SubmitButton = ({ userSelection, changeView }) => {
+const SubmitButton = ({ userSelection, changeView, setParadiseData }) => {
 
   const handleClick = (e) => {
     e.preventDefault();
-    console.log(userSelection)
     axios({
       method: 'post',
-      url: 'http://training.us-hpccsystems-dev.azure.lnrsg.io:8002/WsEcl/json/query/roxie/findurparadisesvc-jeff2.1?ver_=0',
-      data: {"workshop.findurparadisesvc.1": userSelection},
+      headers: { 'Content-Type': 'application/json' },
+      url: 'http://localhost:3000/myparadise',
+      data: userSelection,
+    })
+    .then((res) => {
+      setParadiseData(res.data);
+    })
+    .catch((err) => {
+      console.log(err);
     })
     changeView(1);
   }
