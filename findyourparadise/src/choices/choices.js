@@ -9,7 +9,6 @@ const choices = [
 'weather_events',
 'weather_injuries',
 'weather_fatalities',
-'i_want_it_all'
 ];
 
 export default choices;

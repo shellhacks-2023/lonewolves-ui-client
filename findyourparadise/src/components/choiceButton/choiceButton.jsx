@@ -11,7 +11,7 @@ const ChoiceButton = ({ choice, updateUserSelection, userSelection }) => {
   }
 
   return (
-    <button className="btn" style={{backgroundColor: buttonColor}} onClick={handleClick}>{choice}</button>
+    <button className="btn" style={{backgroundColor: buttonColor}} onClick={handleClick}>{choice.replace(/_/g, ' ')}</button>
   )
 };
 
